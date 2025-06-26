@@ -1,10 +1,7 @@
 # AI-Powered Time Series Forecasting 🚦
 
 <div align="center">
-  <video width="150" autoplay loop muted>
-    <source src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/stock-market-data-analysis-14837337-11985949.mp4" type="video/mp4">
-    Time Series Analysis Animation
-  </video>
+  <img src="https://drive.google.com/file/d/1FuGoH8hGms7axktxLwzf7qouVvvCk_9K/view?usp=drive_link" alt="Monarch Butterfly Flapping Wings" width="200"/>
 </div>
 
 > **A Temporal Attention-Based SARIMA–BiLSTM Residual Learning Model Tuned by Grey Wolf Optimizer for Parallel Urban Traffic Forecasting**
