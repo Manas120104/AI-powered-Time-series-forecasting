@@ -1,7 +1,7 @@
 # AI-Powered Time Series Forecasting 🚦
 
 <div align="center">
-  <img src="https://media1.tenor.com/m/W9wGjO4W-wwAAAAC/bullish-bull.gif" alt="Time Series Graph" width="300"/>
+  <img src="https://media1.tenor.com/m/W9wGjO4W-wwAAAAC/bullish-bull.gif" alt="Time Series Graph" width="200"/>
 </div>
 
 > **A Temporal Attention-Based SARIMA–BiLSTM Residual Learning Model Tuned by Grey Wolf Optimizer for Parallel Urban Traffic Forecasting**
@@ -21,7 +21,7 @@
 
 </td>
 <td width="50%" valign="top" align="center">
-<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3ZqNzRsM3YzdnY3amxuZXdrdXZzZGYyNHQwNHdqajh6NDdwNDdneCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qqwBvSUoVrHDG/giphy.gif" alt="Grey wolf" width="100%"/>
+<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3ZqNzRsM3YzdnY3amxuZXdrdXZzZGYyNHQwNHdqajh6NDdwNDdneCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qqwBvSUoVrHDG/giphy.gif" alt="Grey wolf" width="100%" height="100%"/>
 </td>
 </tr>
 </table>
