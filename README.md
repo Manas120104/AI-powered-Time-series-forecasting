@@ -1,9 +1,39 @@
 # AI-Powered Time Series Forecasting 🚦
 
-<div align="center">
-  <img src="https://media1.tenor.com/m/W9wGjO4W-wwAAAAC/bullish-bull.gif" alt="Time Series Graph" width="200"/>
-  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3ZqNzRsM3YzdnY3amxuZXdrdXZzZGYyNHQwNHdqajh6NDdwNDdneCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qqwBvSUoVrHDG/giphy.gif" alt="Grey wolf" width="300"/>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaced GIFs</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: transparent;
+        }
+        
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .gif-container img {
+            background: transparent;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img src="https://media1.tenor.com/m/W9wGjO4W-wwAAAAC/bullish-bull.gif" alt="Time Series Graph" width="200"/>
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3ZqNzRsM3YzdnY3amxuZXdrdXZzZGYyNHQwNHdqajh6NDdwNDdneCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qqwBvSUoVrHDG/giphy.gif" alt="Grey wolf" width="300"/>
+    </div>
+</body>
+</html>
 
 > **A Temporal Attention-Based SARIMA–BiLSTM Residual Learning Model Tuned by Grey Wolf Optimizer for Parallel Urban Traffic Forecasting**
 
