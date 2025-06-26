@@ -1,7 +1,7 @@
 # AI-Powered Time Series Forecasting 🚦
 
 <div align="center">
-  <img src="stock-market-data-analysis-14837337-11985949-ezgif.com-optimize.gif" alt="Monarch Butterfly Flapping Wings" width="200"/>
+  <img src="https://media1.tenor.com/m/W9wGjO4W-wwAAAAC/bullish-bull.gif" alt="Time Series Graph" width="200"/>
 </div>
 
 > **A Temporal Attention-Based SARIMA–BiLSTM Residual Learning Model Tuned by Grey Wolf Optimizer for Parallel Urban Traffic Forecasting**
