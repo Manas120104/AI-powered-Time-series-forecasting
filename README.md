@@ -28,7 +28,7 @@
 
 ## 🎯 Overview
 
-This project presents a novel hybrid residual learning framework that revolutionizes urban traffic forecasting by combining **SARIMA** with **BiLSTM networks** enhanced by **temporal attention mechanisms**. Optimized through **Grey Wolf Optimization (GWO)** and accelerated with parallel processing, the system achieves exceptional accuracy and scalability for real-time traffic prediction applications.
+This project presents a novel hybrid residual learning framework that revolutionizes urban traffic forecasting by combining **SARIMA** with **BiLSTM networks** enhanced by **temporal attention mechanism**. Optimized through **Grey Wolf Optimization (GWO)** and accelerated with parallel processing, the system achieves exceptional accuracy and scalability for real-time traffic prediction applications.
 
 ## 🚨 Problem Statement
 
@@ -59,7 +59,7 @@ This project presents a novel hybrid residual learning framework that revolution
 - **Nonlinear Pattern Recognition**: Learns complex traffic behaviors and anomalies
 
 ### Step 3: Temporal Attention Enhancement 🎯
-- **Residual Temporal Attention (RTA)**: Selects most important residual hidden states
+- **Residual Temporal Attention (RTA)**: Selects most important residual BiLSTM hidden states
 - **Attention Mechanism**: Focuses on critical temporal features for final forecast
 - **Enhanced Prediction**: Improves accuracy by weighting relevant time steps
 
