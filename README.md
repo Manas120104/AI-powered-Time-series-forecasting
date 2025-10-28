@@ -17,6 +17,7 @@
 - [Understanding the Pipeline](#-understanding-the-pipeline)
 - [How It Works](#-how-it-works)
 - [Key Features](#-key-features)
+- [Forecast Outputs](#-forecast-outputs)
 - [Technology Stack](#️-technology-stack)
 - [Performance](#-performance)
 - [Research Impact](#-research-impact)
@@ -26,7 +27,7 @@
 
 </td>
 <td width="50%" valign="top" align="center">
-<img src="architecture-diagram.png" alt="Hybrid AI Pipeline Architecture" width="100%"/>
+<img src="images/architecture-diagram.png" alt="Hybrid AI Pipeline Architecture" width="100%"/>
 </td>
 </tr>
 </table>
@@ -217,6 +218,34 @@ Together, they form a robust hybrid forecasting pipeline that runs in parallel.
 🌐 **Real-World Tested**: Validated on actual urban traffic datasets  
 🚀 **Scalable Solution**: Built for large-scale transportation networks  
 📊 **Residual Learning**: Captures complex nonlinear traffic dynamics
+
+## 📊 Forecast Outputs
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="images/outputJ1.png" alt="Junction 1 Forecast" width="100%"/>
+      <p><strong>Junction 1 - Hybrid Pipeline Forecast</strong></p>
+    </td>
+    <td width="50%" align="center">
+      <img src="images/outputJ2.png" alt="Junction 2 Forecast" width="100%"/>
+      <p><strong>Junction 2 - Hybrid Pipeline Forecast</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="images/outputJ3.png" alt="Junction 3 Forecast" width="100%"/>
+      <p><strong>Junction 3 - Hybrid Pipeline Forecast</strong></p>
+    </td>
+    <td width="50%" align="center">
+      <img src="images/outputJ4.png" alt="Junction 4 Forecast" width="100%"/>
+      <p><strong>Junction 4 - Hybrid Pipeline Forecast</strong></p>
+    </td>
+  </tr>
+</table>
+
+*The visualizations show the hybrid SARIMA-BiLSTM-Residual Attention forecasts (green) compared to actual traffic data (blue) and predictions on test data (red) across four different traffic junctions.*
+
 
 ## 🛠️ Technology Stack
 
