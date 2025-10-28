@@ -16,6 +16,7 @@
 - [Problem Statement](#-problem-statement)
 - [Understanding the Pipeline](#-understanding-the-pipeline)
 - [How It Works](#-how-it-works)
+- [Algorithms](#-algorithms)
 - [Key Features](#-key-features)
 - [Forecast Outputs](#-forecast-outputs)
 - [Technology Stack](#️-technology-stack)
@@ -207,6 +208,24 @@ Together, they form a robust hybrid forecasting pipeline that runs in parallel.
 - **Parallel Architecture**: Processes multiple traffic streams simultaneously
 - **Scalable Design**: Handles large-scale urban traffic networks
 - **Real-time Inference**: Delivers predictions with minimal latency
+
+## 🔬 Algorithms
+
+### Grey Wolf Optimization Algorithm
+<p align="center">
+  <img src="images/gwo-algorithm.png" alt="Grey Wolf Optimization Algorithm" width="100%"/>
+</p>
+
+*The Grey Wolf Optimization (GWO) algorithm mimics the leadership hierarchy and hunting mechanism of grey wolves to automatically tune SARIMA and BiLSTM hyperparameters.*
+
+---
+
+### Hybrid Pipeline Algorithm
+<p align="center">
+  <img src="images/pipeline-algorithm.png" alt="Hybrid Pipeline Algorithm" width="100%"/>
+</p>
+
+*Complete workflow of the hybrid SARIMA-BiLSTM residual learning pipeline with temporal attention mechanism and parallel processing architecture.*
 
 ## ✨ Key Features
 
