@@ -176,7 +176,7 @@ Together, they form a robust hybrid forecasting pipeline that runs in parallel.
 - **🔄 Residual Learning**: Separates linear and nonlinear components
 - **⚡ Parallel Processing**: Multi-threaded execution for scalability
 - **🎭 Attention Weights**: Temporal importance scoring
-- **📊 Hybrid Framework**: Seamless integration of statistical and deep learning models
+- **📊 Hybrid Pipeline**: Seamless integration of statistical and deep learning models
 
 ### Performance Optimization
 - **🚀 Parallel Execution**: Concurrent processing of traffic streams
@@ -205,13 +205,13 @@ The AI-powered traffic forecasting system demonstrates outstanding performance a
 
 This project contributes to multiple research domains:
 - **🚦 Transportation Engineering**: Advanced traffic prediction methodologies
-- **🤖 Machine Learning**: Novel hybrid residual learning frameworks
+- **🤖 Machine Learning**: Novel hybrid residual learning pipeline
 - **🐺 Bio-inspired Computing**: Application of GWO in time series optimization
 - **⚡ Parallel Computing**: Scalable architectures for real-time forecasting
 - **🏙️ Smart Cities**: Intelligent transportation system solutions
 
 ### Key Innovations
-- **🔄 Hybrid Residual Framework**: Combines statistical and deep learning strengths
+- **🔄 Hybrid Residual Pipeline**: Combines statistical and deep learning strengths
 - **🎭 Temporal Attention**: Enhanced focus on critical time dependencies
 - **🐺 Automated Optimization**: Bio-inspired hyperparameter tuning
 - **⚡ Parallel Scalability**: Efficient processing for large-scale deployment
