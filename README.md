@@ -22,6 +22,7 @@
 - [Technology Stack](#️-technology-stack)
 - [Performance](#-performance)
 - [Research Impact](#-research-impact)
+- [Why Hybrid?](#-why-hybrid)
 - [License](#-license)
 - [Citation & Paper Link](#-citation)
 - [Contact & Contributions](#-contact--contributions)
@@ -53,8 +54,8 @@ This project presents a novel hybrid residual learning AI pipeline that revoluti
 - Automates optimization through bio-inspired algorithms
 - Delivers 10.11× processing speedup over conventional approaches
 
-### 🧠 Understanding the Pipeline
-## 🎯 What the "parallel_forecast.py" script does
+## 🧠 Understanding the Pipeline
+### 🎯 What the "parallel_forecast.py" script does
 There are two implementations provided - one is "sequential_forecast.ipynb" that implements the entire hybrid pipeline sequentially for all the traffic junctions, which is time consuming. Where as the "parallel_forecast.py" processes different traffic junctions parallelly, resulting in 10x computational speedup.
 
 It predicts future traffic volumes (or any time-series variable like “Vehicles”) by blending two different forecasting methods:
@@ -317,6 +318,13 @@ This project contributes to multiple research domains:
 - **🎭 Temporal Attention**: Enhanced focus on critical time dependencies
 - **🐺 Automated Optimization**: Bio-inspired hyperparameter tuning
 - **⚡ Parallel Scalability**: Efficient processing for large-scale deployment
+
+## 🎓 Why Hybrid?
+- **SARIMA ✅ Great for**: Linear trends, seasonality, stable patterns
+- **SARIMA ❌ Struggles with**: Non-linear dynamics, complex patterns, sudden changes
+- **BiLSTM ✅ Great for**: Complex patterns, non-linearity, sequential dependencies
+- **BiLSTM ❌ Struggles with**: Overfitting in case of comparatively simpler data
+- **Hybrid 🎯 Combines** strengths of both for superior forecasting accuracy!
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
