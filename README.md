@@ -1,4 +1,4 @@
-# Hybrid AI Pipeline for High-Performance Urban Traffic Forecasting 🚦
+# Hybrid AI Pipeline for High-Performance Real-Time Urban Traffic Forecasting 🚦
 
 <div align="center">
   <img src="https://media1.tenor.com/m/W9wGjO4W-wwAAAAC/bullish-bull.gif" alt="Time Series Graph" width="200"/>
