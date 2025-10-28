@@ -61,6 +61,8 @@ It predicts future traffic volumes (or any time-series variable like “Vehicles
 
 - **BiLSTM (Bidirectional LSTM)** - to learn and correct the nonlinear residual errors left behind by SARIMA.
 
+- **Attention Mechanism (Residual Temporal Attention)** - to select (attend to) the most important residual BiLSTM hidden states, focusing on critical temporal features to improve forecast accuracy by weighting relevant time steps.
+
 The result is a hybrid pipeline that combines the best of both worlds: statistical forecasting + deep learning.
 
 ## ⚙️ Step-by-step Conceptual Flow
@@ -96,25 +98,77 @@ Residuals are scaled between 0–1 using MinMaxScaler.
 They are turned into supervised sequences (sliding windows).
 A Bidirectional LSTM neural network learns how these residuals evolve over time — basically learning SARIMA’s “mistakes.”
 
-### 🧮 Step 5 — Combine Both Models
-The BiLSTM predicts future residuals.
+### 🧠 Step 5 — Residual Temporal Attention Mechanism
+After the BiLSTM processes the residual sequence, the **Residual Temporal Attention (RTA)** mechanism identifies which time steps are most important for accurate forecasting. **This attention mechanism is implemented as a neural network** that learns to assign importance weights dynamically.
+
+#### Hidden State Representation
+The BiLSTM generates a sequence of hidden states for the most recent $k$ residual time steps:
+
+$$\{h_{t-k}, \ldots, h_{t-1}\}$$
+
+where each $h_{t-i} \in \mathbb{R}^d$ encodes information about residual $R_{t-i}$, with $i \in \{1, 2, \ldots, k\}$.
+
+#### Attention Weight Calculation via Neural Network
+**A neural network layer computes** normalized attention weights $\alpha_i$ to measure each hidden state's relevance:
+
+$$\alpha_i = \frac{\exp\left(w_a^T \tanh(W_r h_{t-i} + b)\right)}{\sum_{j=1}^{k} \exp\left(w_a^T \tanh(W_r h_{t-j} + b)\right)}$$
+
+**Where:**
+- $W_r \in \mathbb{R}^{d_a \times d}$: Learnable weight matrix projecting hidden states to attention space
+- $b \in \mathbb{R}^{d_a}$: Learnable bias term for attention projection
+- $\tanh(\cdot)$: Nonlinear activation function
+- $w_a \in \mathbb{R}^{d_a}$: Learnable attention vector for scoring (trained end-to-end)
+- $\alpha_i \in [0, 1]$: Normalized attention weight (all weights sum to 1)
+
+> **Note:** The parameters $W_r$, $b$, and $w_a$ are learned during training through backpropagation, allowing the neural network to automatically discover which temporal patterns matter most.
+
+#### Context Vector Formation
+The attention weights are used to create a weighted context vector that aggregates the most relevant temporal features:
+
+$$c_t = \sum_{i=1}^{k} \alpha_i h_{t-i}$$
+
+where $c_t \in \mathbb{R}^d$ represents the attention-weighted combination of hidden states.
+
+#### Final Residual Prediction
+The context vector is passed through a **fully connected neural network layer** to produce the final residual forecast:
+
+$$\hat{R}_t^{(attn)} = W_o c_t + b_o$$
+
+**Where:**
+- $W_o \in \mathbb{R}^{1 \times d}$: Learnable output weight matrix
+- $b_o \in \mathbb{R}$: Learnable output bias term
+- $\hat{R}_t^{(attn)}$: Attention-enhanced residual prediction
+
+#### Neural Network Architecture
+The complete attention mechanism consists of:
+1. **Projection Layer**: Maps BiLSTM hidden states to attention space ($W_r$, $b$)
+2. **Attention Scoring Network**: Computes importance scores using $w_a$
+3. **Softmax Normalization**: Converts scores to probability distribution
+4. **Output Dense Layer**: Transforms context vector to final prediction ($W_o$, $b_o$)
+
+#### Key Advantage
+This **trainable neural network-based attention mechanism** allows the model to **dynamically learn and focus** on the most informative past residuals, improving prediction accuracy by automatically discovering which historical patterns are most relevant for the current forecast.
+
+### 🧮 Step 6 — Combine Both Models
+The Attention enhanced BiLSTM predicts future residuals.
 
 > [!IMPORTANT]
-> 🧮 **Final hybrid prediction =** `SARIMA_Prediction + LSTM_Residual_Prediction`
+> 🧮 **Final hybrid prediction =** `SARIMA_Prediction + LSTM_Attention_Residual_Prediction`
 
 This correction step gives smoother, more accurate forecasts.
 
-### 🔮 Step 6 — Forecast Future Values
+### 🔮 Step 7 — Forecast Future Values
 SARIMA produces a future forecast for the desired horizon (e.g., 180 days).
 BiLSTM predicts corresponding residuals for the same horizon in an iterative loop.
+Residual Temporal Attention Mechanism identifies the most important past residual time steps for accurately predicting the future residuals, thus enhancing the BiLSTM's output.
 **Both are added together → Hybrid Forecast.**
 
-### 🖼️ Step 7 — Visualization & Saving
+### 🖼️ Step 8 — Visualization & Saving
 Each junction’s hybrid forecast is plotted and saved as a PNG file.
 CPU and memory usage are monitored and plotted (resource_usage.png).
 A summary CSV (hybrid_results_summary.csv) logs all junction-level results and MAPE values.
 
-### 💻 Step 8 — Multiprocessing Orchestration
+### 💻 Step 9 — Multiprocessing Orchestration
 The main() function:
 - Spawns multiple worker processes (one per junction).
 - Monitors system resources.
@@ -174,12 +228,12 @@ Together, they form a robust hybrid forecasting pipeline that runs in parallel.
 
 ### Advanced Features
 - **🔄 Residual Learning**: Separates linear and nonlinear components
-- **⚡ Parallel Processing**: Multi-threaded execution for scalability
+- **⚡ Parallel Processing**: Multiple processes executing for scalability
 - **🎭 Attention Weights**: Temporal importance scoring
 - **📊 Hybrid Pipeline**: Seamless integration of statistical and deep learning models
 
 ### Performance Optimization
-- **🚀 Parallel Execution**: Concurrent processing of traffic streams
+- **🚀 Parallel Execution**: Concurrent processing of traffic data for different urban junctions
 - **⚙️ Automated Tuning**: Eliminates manual hyperparameter selection
 - **💾 Efficient Memory**: Optimized for large-scale data processing
 - **⏱️ Real-time Inference**: Low-latency prediction pipeline
@@ -231,7 +285,7 @@ If you use this work in your research or projects, please cite our paper:
 }
 ```
 
-**Paper Link**: [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/11083601)
+**Paper Link**: [IEEE Access](https://ieeexplore.ieee.org/abstract/document/11083601)
 
 ## 📬 Contact & Contributions
 For questions, issues, or contributions, please open an issue or submit a pull request on the repository.
