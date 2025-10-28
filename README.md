@@ -80,7 +80,7 @@ For each junction, the time series is extracted and split into:
 - **80% Training set**
 - **20% Testing set**
 
-### 🐺 Step 2 — Grey Wolf Optimizer (GWO) for SARIMA Tuning
+### 🐺 Step 2 — Grey Wolf Optimizer (GWO) for SARIMA Hyperparameter Tuning
 Instead of manually guessing SARIMA parameters (p,d,q) and (P,D,Q,m), a metaheuristic called Grey Wolf Optimizer automatically searches for the best ones.
 - GWO simulates how wolves hunt prey — exploring and converging toward the best solution over several iterations.
 - **The goal:** minimize MAPE (Mean Absolute Percentage Error) on test data.
