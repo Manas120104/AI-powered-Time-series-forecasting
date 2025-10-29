@@ -29,7 +29,7 @@
 
 </td>
 <td width="50%" valign="top" align="center">
-<img src="./images/architecture-diagram.png" alt="Hybrid AI Pipeline Architecture" width="100%"/>
+<img src="https://cdn.jsdelivr.net/gh/Manas120104/AI-powered-Time-series-forecasting@main/images/architecture-diagram.png" alt="Hybrid AI Pipeline Architecture" width="100%"/>
 </td>
 </tr>
 </table>
@@ -214,7 +214,7 @@ Together, they form a robust hybrid forecasting pipeline that runs in parallel.
 
 ### Grey Wolf Optimization Algorithm
 <p align="center">
-  <img src="./images/gwo-algorithm.png" alt="Grey Wolf Optimization Algorithm" width="100%"/>
+  <img src="https://cdn.jsdelivr.net/gh/Manas120104/AI-powered-Time-series-forecasting@main/images/gwo-algorithm.png" alt="Grey Wolf Optimization Algorithm" width="100%"/>
 </p>
 
 *The Grey Wolf Optimization (GWO) algorithm mimics the leadership hierarchy and hunting mechanism of grey wolves to automatically tune SARIMA and BiLSTM hyperparameters.*
@@ -223,7 +223,7 @@ Together, they form a robust hybrid forecasting pipeline that runs in parallel.
 
 ### Hybrid Pipeline Algorithm
 <p align="center">
-  <img src="./images/pipeline-algorithm.png" alt="Hybrid Pipeline Algorithm" width="100%"/>
+  <img src="https://cdn.jsdelivr.net/gh/Manas120104/AI-powered-Time-series-forecasting@main/images/pipeline-algorithm.png" alt="Hybrid Pipeline Algorithm" width="100%"/>
 </p>
 
 *Complete workflow of the hybrid SARIMA-BiLSTM residual learning pipeline with temporal attention mechanism and parallel processing architecture.*
@@ -244,21 +244,21 @@ Together, they form a robust hybrid forecasting pipeline that runs in parallel.
 <table>
   <tr>
     <td width="50%" align="center">
-      <img src="./images/outputJ1.png" alt="Junction 1 Forecast" width="100%"/>
+      <img src="https://cdn.jsdelivr.net/gh/Manas120104/AI-powered-Time-series-forecasting@main/images/outputJ1.png" alt="Junction 1 Forecast" width="100%"/>
       <p><strong>Junction 1 - Hybrid Pipeline Forecast</strong></p>
     </td>
     <td width="50%" align="center">
-      <img src="./images/outputJ2.png" alt="Junction 2 Forecast" width="100%"/>
+      <img src="https://cdn.jsdelivr.net/gh/Manas120104/AI-powered-Time-series-forecasting@main/images/outputJ2.png" alt="Junction 2 Forecast" width="100%"/>
       <p><strong>Junction 2 - Hybrid Pipeline Forecast</strong></p>
     </td>
   </tr>
   <tr>
     <td width="50%" align="center">
-      <img src="./images/outputJ3.png" alt="Junction 3 Forecast" width="100%"/>
+      <img src="https://cdn.jsdelivr.net/gh/Manas120104/AI-powered-Time-series-forecasting@main/images/outputJ3.png" alt="Junction 3 Forecast" width="100%"/>
       <p><strong>Junction 3 - Hybrid Pipeline Forecast</strong></p>
     </td>
     <td width="50%" align="center">
-      <img src="./images/outputJ4.png" alt="Junction 4 Forecast" width="100%"/>
+      <img src="https://cdn.jsdelivr.net/gh/Manas120104/AI-powered-Time-series-forecasting@main/images/outputJ4.png" alt="Junction 4 Forecast" width="100%"/>
       <p><strong>Junction 4 - Hybrid Pipeline Forecast</strong></p>
     </td>
   </tr>
